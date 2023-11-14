@@ -31,6 +31,9 @@ const App = () => {
       setWeather(jsonData.weather[0].main)
       setIcon(jsonData.weather[0].icon)
       setLoading(false)
+      setTimeout(()=>{
+        setSearch('');
+      },1000)
       console.log(jsonData)})
     .catch((error)=>console.log(error))
   },3000),[search])
